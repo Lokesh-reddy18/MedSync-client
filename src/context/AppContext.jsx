@@ -6,12 +6,22 @@ export const AppContext = createContext()
 
 const AppContextProvider = (props) => {
 
-      const currencySymbol = '$'
+      const currencySymbol = '₹'
       const backendUrl = import.meta.env.VITE_BACKEND_URL
 
       const [doctors, setDoctors] = useState([])
       const [token, setToken] = useState(localStorage.getItem('utoken') ? localStorage.getItem('utoken') : false)
       const [userData, setUserData] = useState(false)
+
+      // Format currency to Indian Rupees
+      const formatCurrency = (amount) => {
+            return new Intl.NumberFormat('en-IN', {
+                  style: 'currency',
+                  currency: 'INR',
+                  minimumFractionDigits: 0,
+                  maximumFractionDigits: 0
+            }).format(amount);
+      }
 
       const getDoctorsData = async () => {
             try {
@@ -46,6 +56,7 @@ const AppContextProvider = (props) => {
             doctors,
             getDoctorsData,
             currencySymbol,
+            formatCurrency,
             token,
             setToken,
             backendUrl,
