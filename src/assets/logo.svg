@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="50" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Medical Cross -->
+    <path d="M25 10H35V20H45V30H35V40H25V30H15V20H25V10Z" fill="#4F46E5"/>
+    
+    <!-- Sync Arrows -->
+    <path d="M60 25C60 35.4934 51.4934 44 41 44C30.5066 44 22 35.4934 22 25C22 14.5066 30.5066 6 41 6C51.4934 6 60 14.5066 60 25Z" stroke="#4F46E5" stroke-width="2"/>
+    <path d="M41 6V12M41 38V44M22 25H28M54 25H60" stroke="#4F46E5" stroke-width="2" stroke-linecap="round"/>
+    
+    <!-- Text -->
+    <text x="70" y="32" font-family="Arial" font-size="24" font-weight="bold" fill="#1F2937">MedSync</text>
+</svg>
